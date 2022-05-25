@@ -1,8 +1,12 @@
-sap.ui.define(
-    [
+sap.ui.define([
+	"sap/ui/core/mvc/XMLView"
+], function (XMLView) {
+	"use strict";
 
-    ],function(){
-        "use strict";
-        
-        alert("I am a alert!")
-    })
+	XMLView.create({
+		viewName: "sap.ui.demo.walkthrough.view.App"
+	}).then(function (oView) {
+		oView.placeAt("content");
+	});
+
+});
